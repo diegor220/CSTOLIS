@@ -20,13 +20,7 @@ class Neutron (object):
     
     def collision(self,atom):
         if dist(self.posx,self.posy,atom.x,atom.y)<25:
-            self.ballpass = True
-            
-
-            
-            
-        
-        
+            self.ballpass = True    
 
 class Atom (object):
     def __init__ (self):
