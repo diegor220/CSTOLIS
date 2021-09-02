@@ -2,6 +2,7 @@ from microbit import *
 from motobit import *
 import radio
 
+
 radio.on()
 
 while True:
@@ -25,19 +26,27 @@ while True:
 
         if radio.receive() == 'left':
         
-            l.set_speed(25)
-            r.set_speed(50)
-            sleep(1000)
+            Motor.enable()
+            l.set_speed(150)
+            r.set_speed(100)
+            sleep(1)
+            Motor.disable()
             
         
         if radio.receive() == 'front':
             
-            l.set_speed(50)
-            r.set_speed(50)
+            Motor.enable()
+            l.set_speed(150)
+            r.set_speed(150)
+            sleep(1)
+            Motor.disable()
             
         
         if radio.receive() == 'right':
-            l.set_speed(50)
-            r.set_speed(25)
-
-        
+            
+            Motor.enable()
+            l.set_speed(100)
+            r.set_speed(150)
+            sleep(1)
+            Motor.disable()
+            
